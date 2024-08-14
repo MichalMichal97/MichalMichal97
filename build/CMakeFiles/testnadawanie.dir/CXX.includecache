@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mg/workarea/RESCpp/nadawanie/testnadawanie1.cpp
+uhd/rfnoc/block_id.hpp
+-
+uhd/rfnoc/duc_block_control.hpp
+-
+uhd/rfnoc/mb_controller.hpp
+-
+uhd/rfnoc/radio_control.hpp
+-
+uhd/rfnoc/replay_block_control.hpp
+-
+uhd/rfnoc_graph.hpp
+-
+uhd/types/tune_request.hpp
+-
+uhd/utils/graph_utils.hpp
+-
+uhd/utils/math.hpp
+-
+uhd/utils/safe_main.hpp
+-
+boost/program_options.hpp
+-
+chrono
+-
+csignal
+-
+fstream
+-
+iostream
+-
+thread
+-
+
