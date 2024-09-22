@@ -14,7 +14,7 @@
 #include <fstream>
 #include <iostream>
 #include <thread>
-namespace po = boost::program_options;
+
 using std::cout;
 using std::endl;
 using namespace std::chrono_literals;
@@ -26,10 +26,7 @@ void sig_int_handler(int)
 }
 int UHD_SAFE_MAIN(int argc, char* argv[])
 {
-    // We use sc16 in this example, but the replay block only uses 64-bit words
-    // and is not aware of the CPU or wire format.
-    std::string wire_format("sc16");
-    std::string cpu_format("sc16");
+
 
     /************************************************************************
      * Set up the program options
@@ -40,7 +37,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     /************************************************************************
      * Create device and block controls
      ***********************************************************************/
-    std::cout << std::endl;
+    std::cout << std::endl; // po prostu nowa linijka 
     std::cout << "Creating the RFNoC graph with args: " << args << "..." << std::endl;
     auto graph = uhd::rfnoc::rfnoc_graph::make(args);
     // Create handle for radio object
@@ -48,7 +45,7 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     auto radio_ctrl = graph->get_block<uhd::rfnoc::radio_control>(radio_ctrl_id);
     // Check if the replay block exists on this device
     uhd::rfnoc::block_id_t replay_ctrl_id(0, "Replay", replay_id);
-    if (!graph->has_block(replay_ctrl_id)) {
+    if (!graph->has_block(replay_ctrl_id)) { // SPRAWDZA CZY JEST REPLAY
         cout << "Unable to find block \"" << replay_ctrl_id << "\"" << endl;
         return EXIT_FAILURE;
     }
@@ -66,6 +63,8 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     /************************************************************************
      * Set up streamer to Replay block and commit graph
      ***********************************************************************/
+    std::string wire_format("sc16");
+    std::string cpu_format("sc16");
     uhd::device_addr_t streamer_args;
     uhd::stream_args_t stream_args(cpu_format, wire_format);
     uhd::tx_streamer::sptr tx_stream;
