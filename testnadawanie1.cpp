@@ -31,8 +31,8 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     /************************************************************************
      * Set up the program options
      ***********************************************************************/
-    std::string args = "addr=192.168.10.2",file ="/home/mg/LFM_ODRA_Ti_40u_B_6M_fs_28M_int_przeplot.dat", ant ="TX/RX", ref = "internal", tx_args;
-    double rate = 20e6, freq = 2.9e6, gain = 20, bw = 100e3;
+    std::string args = "addr=192.168.10.2",file ="/home/mg/lipowiec/LFM_ODRA_Ti_40u_B_6M_fs_56M_4704_Sygn_0_int_przeplot.dat", ant ="TX/RX", ref = "internal", tx_args;
+    double rate = 56e6, freq = 156e6, gain = 500, bw = 6e6;
     size_t radio_id = 0, radio_chan = 0, replay_id = 0, replay_chan = 0, nsamps = 0;
     /************************************************************************
      * Create device and block controls
