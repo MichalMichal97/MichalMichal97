@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/mg/workarea/RESCpp/nadawanie/testnadawanie1.cpp
+/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/testnadawanie1.cpp
 uhd/rfnoc/block_id.hpp
 -
 uhd/rfnoc/duc_block_control.hpp

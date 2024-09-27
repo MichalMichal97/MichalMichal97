@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/mg/workarea/RESCpp/nadawanie/testnadawanie1.cpp" "/home/mg/workarea/RESCpp/nadawanie/build/CMakeFiles/testnadawanie.dir/testnadawanie1.cpp.o"
+  "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/testnadawanie1.cpp" "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/testnadawanie.dir/testnadawanie1.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

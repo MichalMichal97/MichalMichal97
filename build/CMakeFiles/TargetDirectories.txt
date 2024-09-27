@@ -1,3 +1,3 @@
-/home/mg/workarea/RESCpp/nadawanie/build/CMakeFiles/rebuild_cache.dir
-/home/mg/workarea/RESCpp/nadawanie/build/CMakeFiles/edit_cache.dir
-/home/mg/workarea/RESCpp/nadawanie/build/CMakeFiles/testnadawanie.dir
+/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/rebuild_cache.dir
+/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/edit_cache.dir
+/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/testnadawanie.dir

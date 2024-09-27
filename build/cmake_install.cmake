@@ -1,4 +1,4 @@
-# Install script for directory: /home/mg/workarea/RESCpp/nadawanie
+# Install script for directory: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/mg/workarea/RESCpp/nadawanie/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

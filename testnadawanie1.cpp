@@ -31,8 +31,8 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
     /************************************************************************
      * Set up the program options
      ***********************************************************************/
-    std::string args = "addr=192.168.10.2",file ="/home/mg/lipowiec/LFM_ODRA_Ti_40u_B_6M_fs_56M_4704_Sygn_0_int_przeplot.dat", ant ="TX/RX", ref = "internal", tx_args;
-    double rate = 56e6, freq = 156e6, gain = 500, bw = 6e6;
+    std::string args = "addr=192.168.10.2",file ="/home/usrp/workarea/synchro z pc/LFM_DZIWNA_Ti_20u_B_2M_fs_6M_120_Sygn_0_int_przeplot.dat", ant ="TX/RX", ref = "internal", tx_args;
+    double rate = 6e6, freq = 172e6, gain = 500, bw = 6e6;
     size_t radio_id = 0, radio_chan = 0, replay_id = 0, replay_chan = 0, nsamps = 0;
     /************************************************************************
      * Create device and block controls
@@ -119,6 +119,11 @@ int UHD_SAFE_MAIN(int argc, char* argv[])
         radio_ctrl->set_tx_antenna(ant, radio_chan);
     // Allow for some setup time
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
+
+    
+               
+                  
     /************************************************************************
      * Read the data to replay
      ***********************************************************************/

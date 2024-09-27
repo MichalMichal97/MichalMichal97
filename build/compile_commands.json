@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build",
+  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ASIO_DISABLE_STD_EXPERIMENTAL_STRING_VIEW -DBOOST_ASIO_DISABLE_STD_STRING_VIEW -DBOOST_ATOMIC_DYN_LINK -DBOOST_ERROR_CODE_HEADER_ONLY -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK  -O3 -DNDEBUG   -std=gnu++14 -o CMakeFiles/testnadawanie.dir/testnadawanie1.cpp.o -c \"/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/testnadawanie1.cpp\"",
+  "file": "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/testnadawanie1.cpp"
+}
+]

@@ -56,3 +56,235 @@ make: *** [Makefile:121: cmTC_b61f6/fast] Error 2
 
 
 
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6dc58/fast && /usr/bin/make -f CMakeFiles/cmTC_6dc58.dir/build.make CMakeFiles/cmTC_6dc58.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6dc58.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6dc58.dir/src.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp/src.cxx"
+Linking CXX executable cmTC_6dc58
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6dc58.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_6dc58.dir/src.cxx.o  -o cmTC_6dc58 
+/usr/bin/ld: CMakeFiles/cmTC_6dc58.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6dc58.dir/build.make:87: cmTC_6dc58] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6dc58/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_41f3e/fast && /usr/bin/make -f CMakeFiles/cmTC_41f3e.dir/build.make CMakeFiles/cmTC_41f3e.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_41f3e.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_41f3e.dir/CheckFunctionExists.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx"
+Linking CXX executable cmTC_41f3e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41f3e.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_41f3e.dir/CheckFunctionExists.cxx.o  -o cmTC_41f3e  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_41f3e.dir/build.make:87: cmTC_41f3e] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_41f3e/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_242a2/fast && /usr/bin/make -f CMakeFiles/cmTC_242a2.dir/build.make CMakeFiles/cmTC_242a2.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_242a2.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_242a2.dir/src.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp/src.cxx"
+Linking CXX executable cmTC_242a2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_242a2.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_242a2.dir/src.cxx.o  -o cmTC_242a2 
+/usr/bin/ld: CMakeFiles/cmTC_242a2.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_242a2.dir/build.make:87: cmTC_242a2] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_242a2/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2031a/fast && /usr/bin/make -f CMakeFiles/cmTC_2031a.dir/build.make CMakeFiles/cmTC_2031a.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2031a.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2031a.dir/CheckFunctionExists.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx"
+Linking CXX executable cmTC_2031a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2031a.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2031a.dir/CheckFunctionExists.cxx.o  -o cmTC_2031a  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_2031a.dir/build.make:87: cmTC_2031a] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_2031a/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8c64c/fast && /usr/bin/make -f CMakeFiles/cmTC_8c64c.dir/build.make CMakeFiles/cmTC_8c64c.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8c64c.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_8c64c.dir/src.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp/src.cxx"
+Linking CXX executable cmTC_8c64c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c64c.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_8c64c.dir/src.cxx.o  -o cmTC_8c64c 
+/usr/bin/ld: CMakeFiles/cmTC_8c64c.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8c64c.dir/build.make:87: cmTC_8c64c] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8c64c/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5aedf/fast && /usr/bin/make -f CMakeFiles/cmTC_5aedf.dir/build.make CMakeFiles/cmTC_5aedf.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_5aedf.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_5aedf.dir/CheckFunctionExists.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx"
+Linking CXX executable cmTC_5aedf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5aedf.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_5aedf.dir/CheckFunctionExists.cxx.o  -o cmTC_5aedf  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_5aedf.dir/build.make:87: cmTC_5aedf] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5aedf/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_038d9/fast && /usr/bin/make -f CMakeFiles/cmTC_038d9.dir/build.make CMakeFiles/cmTC_038d9.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_038d9.dir/src.cxx.o
+/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_038d9.dir/src.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp/src.cxx"
+Linking CXX executable cmTC_038d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_038d9.dir/link.txt --verbose=1
+/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_038d9.dir/src.cxx.o  -o cmTC_038d9 
+/usr/bin/ld: CMakeFiles/cmTC_038d9.dir/src.cxx.o: in function `main':
+src.cxx:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_038d9.dir/build.make:87: cmTC_038d9] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_038d9/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_95f3f/fast && /usr/bin/make -f CMakeFiles/cmTC_95f3f.dir/build.make CMakeFiles/cmTC_95f3f.dir/build
+make[1]: Entering directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_95f3f.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_95f3f.dir/CheckFunctionExists.cxx.o -c "/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx"
+Linking CXX executable cmTC_95f3f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95f3f.dir/link.txt --verbose=1
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_95f3f.dir/CheckFunctionExists.cxx.o  -o cmTC_95f3f  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_95f3f.dir/build.make:87: cmTC_95f3f] Error 1
+make[1]: Leaving directory '/home/usrp/workarea/synchro z pc/RESCpp/nadawanie/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_95f3f/fast] Error 2
+
+
+
